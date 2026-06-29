@@ -27,11 +27,11 @@ jobs:
       with:
         context: .
         push: true
-        tags: sharath2003/my-portfolio:latest
+        tags: sharath2003/my-portfolio:${{ github.run_number }}
 
     - name: Update image tag in deployment.yaml
       run: |
-        sed -i "s|sharath2003/my-portfolio:.*|sharath2003/my-portfolio:latest|g" k8s/deployment.yaml
+        sed -i "s|sharath2003/my-portfolio:.*|sharath2003/my-portfolio:${{ github.run_number }}|g" k8s/deployment.yaml
 
     - name: Commit and push updated manifest
       run: |
