@@ -59,7 +59,7 @@ function App() {
       <main>
         <section className="hero">
           <div className="hero-content">
-            <span className="badge">Cloud & Infrastructure Engineer</span>
+            <span className="badge">Cloud & Devops Engineer</span>
             <h1 className="hero-title">
               Sharath Chandra C
             </h1>
