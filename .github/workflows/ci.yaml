@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
@@ -36,4 +39,4 @@ jobs:
         git config user.name "Sharath-1863"
         git add k8s/deployment.yaml
         git commit -m "Update image tag [skip ci]" || echo "No changes to commit"
-        git push
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Sharath-1863/my-portfolio.git
